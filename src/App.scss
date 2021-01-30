@@ -1,0 +1,48 @@
+body {
+  padding: 40px 0;
+  background-color: #f3f3f3;
+}
+
+.card {
+  form {
+    textarea {
+      height: 300px;
+    }
+    button {
+      margin-top: 20px;
+    }
+  }
+
+  ul {
+    overflow-wrap: break-word;
+
+    li {
+      font-size: 1.3em;
+      margin: 10px 0;
+
+      &.right {
+        text-align: right;
+      }
+
+      .from {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 700;
+      }
+      
+      .badge {
+        white-space: normal;
+        text-align: left;
+        font-weight: 400;
+        vertical-align: text-top;
+        line-break: anywhere;
+      }
+
+      .timestamp {
+        display: block;
+        font-size: 0.6em;
+        font-style: italic;
+      }
+    }
+  }
+}
