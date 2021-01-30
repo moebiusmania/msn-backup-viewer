@@ -1,5 +1,5 @@
 # msn-backup-viewer
-Tool to format and easily read backup/export files from good old Microsoft MSN Messenger 👴.
+Tool to format and easily read backup/export files from good the old Microsoft MSN Messenger 👴.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
