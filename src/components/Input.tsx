@@ -1,12 +1,17 @@
 
-import { useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 
-const InputData = (props) => {
-  const [content, setContent] = useState('');
+interface Props {
+  getXML: Function
+};
 
-  const handleChange = (event) => setContent(event.target.value);
+const InputData = (props: Props): JSX.Element => {
+  const [content, setContent] = useState<string>('');
 
-  const handleClick = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => 
+    setContent(event.target.value);
+
+  const handleClick = (event: SyntheticEvent) => {
     event.preventDefault();
     props.getXML(content);
   }
