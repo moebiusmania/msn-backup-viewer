@@ -20,13 +20,13 @@ const InputData = (props: Props): JSX.Element => {
     <form>
       <textarea 
         placeholder="Paste XML content here!"
-        className="form-control"
+        className="textarea h-40 w-full textarea-bordered"
         value={content}
         onChange={handleChange}
       ></textarea>
       <div className="d-grid gap-2">
         <button 
-          className="btn btn-primary btn-lg"
+          className="btn btn-block btn-primary text-white mt-3"
           onClick={handleClick}
         >Convert</button>
       </div>

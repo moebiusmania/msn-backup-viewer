@@ -17,14 +17,14 @@ const mock: MSNmessage = {
 
 const Message = (props: MsgProps): JSX.Element => {
   const item: MSNmessage = props.item || mock;
-  const badge = (check?: boolean): string => check ? 'badge bg-primary' : 'badge bg-secondary';
-  const align = (check?: boolean): string => check ? 'message' : 'message right';
+  const badge = (check?: boolean): string => check ? 'badge-primary text-white block' : 'inline-block bg-gray-500 border-gray-500';
+  const align = (check?: boolean): string => check ? 'my-2' : 'text-right my-2';
 
   return (
     <li className={align(item.left)}>
-      <span className="from">{item.From.User._attributes.FriendlyName}</span>
-      <span className={badge(item.left)}>{item.Text._text}</span>
-      <span className="timestamp">{item._attributes.Date} {item._attributes.Time}</span>
+      <span className="text-sm font-bold block">{item.From.User._attributes.FriendlyName}</span>
+      <span className={"badge my-1 whitespace-normal break-words rounded h-auto " + badge(item.left)}>{item.Text._text}</span>
+      <span className="text-xs italic block">{item._attributes.Date} {item._attributes.Time}</span>
     </li>
   );
 }

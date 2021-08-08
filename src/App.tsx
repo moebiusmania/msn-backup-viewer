@@ -7,8 +7,6 @@ import { Card } from './components/Card';
 import { Messages } from './components/Messages';
 import { MSNobject } from './type';
 
-import './App.scss';
-
 // const Empty = (): JSX.Element => <div></div>;
 
 const App = (): JSX.Element => {
@@ -29,9 +27,9 @@ const App = (): JSX.Element => {
   }, [content]);
 
   return (
-    <main className="container">
+    <main className="container py-12">
       <Card>
-        <h2>MSN Messenger viewer</h2>
+        <h2 className="card-title text-3xl">MSN Messenger viewer</h2>
         {showInput ? <InputData getXML={inputHandler} /> : <Messages data={data.Log.Message} />}
       </Card>
     </main>
