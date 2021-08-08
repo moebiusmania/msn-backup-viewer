@@ -1,6 +1,6 @@
 {
   "name": "msn-backup-viewer",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://moebiusmania.github.io/msn-backup-viewer",
   "private": true,
   "dependencies": {
