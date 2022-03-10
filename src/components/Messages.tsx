@@ -19,7 +19,7 @@ const Message = (props: MsgProps): JSX.Element => {
   const item: MSNmessage = props.item || mock;
   const badge = (check?: boolean): string =>
     check
-      ? "badge-primary text-white block"
+      ? "badge-primary text-base-100 block"
       : "inline-block bg-gray-500 border-gray-500";
   const align = (check?: boolean): string =>
     check ? "my-2" : "text-right my-2";

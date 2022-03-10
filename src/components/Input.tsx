@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import { example } from "./../data/samples";
 
 interface Props {
   getXML: Function;
@@ -12,9 +13,14 @@ const InputData = (props: Props): JSX.Element => {
   }: JSX.TargetedEvent<HTMLTextAreaElement, Event>) =>
     setContent(currentTarget.value);
 
-  const handleClick = (event: MouseEvent) => {
+  const handleClick = (event: MouseEvent): void => {
     event.preventDefault();
     props.getXML(content);
+  };
+
+  const loadSample = (event: MouseEvent): void => {
+    event.preventDefault();
+    props.getXML(example);
   };
 
   return (
@@ -25,7 +31,13 @@ const InputData = (props: Props): JSX.Element => {
         value={content}
         onChange={handleChange}
       ></textarea>
-      <div class="d-grid gap-2">
+      <div>
+        <button
+          class="btn btn-block btn-secondary text-white mt-3"
+          onClick={loadSample}
+        >
+          Sample data
+        </button>
         <button
           class="btn btn-block btn-primary text-white mt-3"
           onClick={handleClick}

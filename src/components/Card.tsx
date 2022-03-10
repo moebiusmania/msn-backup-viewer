@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Card = (props: Props): JSX.Element => (
-  <div class="card w-1/2 shadow-lg bg-white mx-auto mb-6">
+  <div class="card lg:w-1/2 md:shadow-lg bg-base-100 mx-auto mb-6">
     <div class="card-body">{props.children}</div>
   </div>
 );
