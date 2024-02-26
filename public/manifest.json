@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "msn-backup-viewer",
+  "short_name": "MSN Backup Viewer",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "(small) tool to format and easily read backup/export files from good old Microsoft MSN Messenger 👴"
+}
