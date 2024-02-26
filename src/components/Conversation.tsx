@@ -2,22 +2,12 @@ import { component$ } from "@builder.io/qwik";
 import get from "lodash.get";
 
 import { MSNmessage } from "~/types";
+import { mock } from "~/utils";
 import Message from "./Message";
-
-interface MsgProps {
-  item: MSNmessage;
-}
 
 interface Props {
   data: Array<MSNmessage>;
 }
-
-const mock: MSNmessage = {
-  Date: "",
-  Time: "",
-  Text: "",
-  From: { User: { FriendlyName: "" } },
-};
 
 export default component$<Props>((props) => {
   const data: Array<MSNmessage> = props.data || [mock, mock];

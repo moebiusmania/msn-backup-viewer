@@ -1,18 +1,11 @@
 import { component$ } from "@builder.io/qwik";
-import get from "lodash.get";
 
 import { MSNmessage } from "~/types";
+import { mock } from "~/utils";
 
 interface Props {
   item: MSNmessage;
 }
-
-const mock: MSNmessage = {
-  Date: "",
-  Time: "",
-  Text: "",
-  From: { User: { FriendlyName: "" } },
-};
 
 export default component$<Props>((props) => {
   const item: MSNmessage = props.item || mock;
@@ -28,7 +21,7 @@ export default component$<Props>((props) => {
       <span class="block text-sm font-bold">{item.From.User.FriendlyName}</span>
       <span
         class={
-          "badge text-neutral my-1 h-auto whitespace-normal break-words rounded " +
+          "badge my-1 h-auto whitespace-normal break-words rounded text-neutral " +
           badge(item.left)
         }
       >
