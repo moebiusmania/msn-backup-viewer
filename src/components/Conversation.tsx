@@ -1,8 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import get from "lodash.get";
 
-import { MSNmessage } from "~/types";
-import { mock } from "~/utils";
+import type { MSNmessage } from "~/types";
 import Message from "./Message";
 
 interface Props {
@@ -10,7 +9,7 @@ interface Props {
 }
 
 export default component$<Props>((props) => {
-  const data: Array<MSNmessage> = props.data || [mock, mock];
+  const data: Array<MSNmessage> = props.data;
   const key: string = "From.User.FriendlyName";
   let isLeft: boolean = true;
 

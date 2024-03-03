@@ -9,6 +9,5 @@ import parser from "xml2json";
 export const parse = server$((xml: string) => {
   const parsed = parser.toJson(xml);
   const json = JSON.parse(parsed);
-  console.log(json.Log);
   return json.Log ? json.Log.Message : [];
 });

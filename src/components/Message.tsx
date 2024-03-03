@@ -1,14 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 
-import { MSNmessage } from "~/types";
-import { mock } from "~/utils";
+import type { MSNmessage } from "~/types";
 
 interface Props {
   item: MSNmessage;
 }
 
 export default component$<Props>((props) => {
-  const item: MSNmessage = props.item || mock;
+  const item: MSNmessage = props.item;
   const badge = (check?: boolean): string =>
     check
       ? "badge-primary text-base-100 block"

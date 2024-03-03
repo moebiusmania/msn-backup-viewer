@@ -1,9 +1,9 @@
-import { DocumentHead } from "@builder.io/qwik-city";
+import type { DocumentHead } from "@builder.io/qwik-city";
 import { component$, useContext, useSignal, useTask$ } from "@builder.io/qwik";
 
 import Conversation from "~/components/Conversation";
 import { parse } from "~/utils/parse";
-import { MSNmessage } from "~/types";
+import type { MSNmessage } from "~/types";
 
 import pkg from "../../../package.json";
 import { CTX } from "../layout";
@@ -14,10 +14,7 @@ export default component$(() => {
 
   useTask$(async () => {
     data.value = await parse(state.text);
-    console.log(data.value);
   });
-
-  console.log(state.text);
 
   return (
     <>

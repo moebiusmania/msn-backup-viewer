@@ -5,6 +5,14 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig((): UserConfig => {
   return {
+    ssr: {
+      external: ["xml2json"],
+    },
+    esbuild: {
+      supported: {
+        'top-level-await': true //browsers can handle top-level-await features
+      },
+    },
     plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
     server: {
       port: 3000,
