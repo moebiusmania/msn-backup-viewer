@@ -17,14 +17,16 @@ export default component$<Props>((props) => {
 
   return (
     <li class={align(item.left)}>
-      <span class="block text-sm font-bold">{item.From.User.FriendlyName}</span>
+      <span class="block text-sm font-bold">
+        {item.From.User["@_FriendlyName"]}
+      </span>
       <span
         class={
           "badge my-1 h-auto whitespace-normal break-words rounded text-neutral " +
           badge(item.left)
         }
       >
-        {item.Text["$t"]}
+        {item.Text["#text"]}
       </span>
       <span class="block text-xs italic">
         {item.Date} {item.Time}

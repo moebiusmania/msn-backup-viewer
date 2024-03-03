@@ -10,7 +10,7 @@ interface Props {
 
 export default component$<Props>((props) => {
   const data: Array<MSNmessage> = props.data;
-  const key: string = "From.User.FriendlyName";
+  const key: string = "From.User.@_FriendlyName";
   let isLeft: boolean = true;
 
   const refined: Array<MSNmessage> = data
