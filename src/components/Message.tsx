@@ -25,7 +25,7 @@ export default component$<Props>((props) => {
           badge(item.left)
         }
       >
-        {item.Text}
+        {item.Text["$t"]}
       </span>
       <span class="block text-xs italic">
         {item.Date} {item.Time}

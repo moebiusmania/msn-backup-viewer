@@ -1,4 +1,10 @@
-import { component$, Slot } from "@builder.io/qwik";
+import {
+  component$,
+  createContextId,
+  Slot,
+  useContextProvider,
+  useStore,
+} from "@builder.io/qwik";
 import { Link, type RequestHandler } from "@builder.io/qwik-city";
 import Card from "~/components/Card";
 
@@ -13,7 +19,13 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   });
 };
 
+export const CTX = createContextId<{ text: string }>("state");
+
 export default component$(() => {
+  const state = useStore({ text: "" });
+
+  useContextProvider(CTX, state);
+
   return (
     <main class="container md:py-4 lg:py-12">
       <Card>

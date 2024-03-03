@@ -7,7 +7,9 @@ export interface MSNobject {
 export interface MSNmessage {
   Date: string;
   Time: string;
-  Text: string;
+  Text: {
+    $t: string;
+  };
   From: {
     User: {
       FriendlyName: string;

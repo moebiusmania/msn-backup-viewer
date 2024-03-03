@@ -1,19 +1,25 @@
-import { component$, $, useSignal } from "@builder.io/qwik";
-import { Link, type DocumentHead } from "@builder.io/qwik-city";
+import { component$, $, useContext, useTask$ } from "@builder.io/qwik";
+import { Link, type DocumentHead, useNavigate } from "@builder.io/qwik-city";
 
 import pkg from "../../package.json";
+import { CTX } from "./layout";
 
 const btnStyle = "btn btn-block btn-primary mt-3 text-white text-lg";
 
 export default component$(() => {
-  const text = useSignal("ciao");
+  const nav = useNavigate();
+  const state = useContext(CTX);
 
   const updateText = $((event: any) => {
-    text.value = event.target.value;
+    state.text = event.target.value;
+  });
+
+  useTask$(async () => {
+    state.text = "";
   });
 
   const onSubmit = $(() => {
-    console.log("submit");
+    nav("/conversation");
   });
 
   return (
@@ -22,13 +28,13 @@ export default component$(() => {
         <textarea
           placeholder="Paste XML content here!"
           class="textarea textarea-bordered h-40 w-full"
-          value={text.value}
+          value={state.text}
           onInput$={updateText}
         ></textarea>
         <div>
           <Link
             href="/sample"
-            class="btn btn-block btn-secondary mt-3 text-lg text-white"
+            class="btn btn-secondary btn-block mt-3 text-lg text-white"
           >
             🤖 Sample data
           </Link>
