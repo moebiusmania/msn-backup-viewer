@@ -25,6 +25,14 @@ Sure, it is public with no authentication and no tracking, just paste your MSN `
 
 There is **private** section protected with a password that is only for me so that I can check my MSN backups easier without the need to access my `.xml` backups.
 
+## Some features to add..
+
+- [ ] better mobile styles
+- [ ] add icon
+- [ ] dark theme switcher
+- [ ] private area
+- [ ] PWA?
+
 ## License
 
 Code under [MIT](LICENSE), MSN messenger logo is property of Microsoft.
