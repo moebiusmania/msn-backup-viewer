@@ -4,7 +4,7 @@ import { Link, type DocumentHead, useNavigate } from "@builder.io/qwik-city";
 import pkg from "../../package.json";
 import { CTX } from "./layout";
 
-const btnStyle = "btn btn-block btn-primary mt-3 text-white text-lg";
+const btnStyle = "btn btn-secondary btn-block my-2 text-lg text-white";
 
 export default component$(() => {
   const nav = useNavigate();
@@ -30,16 +30,18 @@ export default component$(() => {
           class="textarea textarea-bordered h-40 w-full"
           value={state.text}
           onInput$={updateText}
+          required
         ></textarea>
         <div>
-          <Link
-            href="/sample"
-            class="btn btn-secondary btn-block mt-3 text-lg text-white"
-          >
+          <button class={"btn btn-primary btn-block my-2 text-lg text-white"}>
+            💬 Convert
+          </button>
+          <hr class="my-3" />
+          <Link href="/sample" class={btnStyle}>
             🤖 Sample data
           </Link>
-          <button class={btnStyle}>💬 Convert</button>
-          <Link href="/private" class={btnStyle + " btn-disabled"}>
+
+          <Link href="/private" class={btnStyle}>
             🔒 Login
           </Link>
         </div>

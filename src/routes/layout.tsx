@@ -31,7 +31,16 @@ export default component$(() => {
       <Card>
         <header class="prose">
           <h1 class="text-3xl">
-            <Link href="/" class="font-bold no-underline">
+            <Link
+              href="/"
+              class="flex items-center gap-2 font-bold no-underline"
+            >
+              <img
+                src="/favicon.png"
+                class="my-0 h-7 w-7"
+                width={24}
+                height={24}
+              />
               MSN Messenger viewer
             </Link>
           </h1>

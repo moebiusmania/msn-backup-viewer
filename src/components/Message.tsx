@@ -22,7 +22,7 @@ export default component$<Props>((props) => {
       </span>
       <span
         class={
-          "badge my-1 h-auto whitespace-normal break-words rounded text-neutral " +
+          "badge my-1 h-auto whitespace-normal break-words rounded " +
           badge(item.left)
         }
       >
