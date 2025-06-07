@@ -13,11 +13,11 @@ Just copy & paste the XML content in this tool and have your old chat readable a
 
 ## Built with
 
-- [Qwik](https://qwik.dev/) - _server-first JS framework_
-- [Typescript](https://www.typescriptlang.org/) - _Javascript with types_
+- [Deno](https://deno.com/) - _Typescript runtime_
+  - [Fresh](https://fresh.deno.dev/) - _full stack framework_
+  - [Deno Deploy](https://deno.com/deploy) - _hosting platform_
 - [Tailwind.css](https://tailwindcss.com/) + [Daisy UI](https://daisyui.com/) - _CSS as utility classes and UI components_
 - [Firebase](https://firebase.google.com/) - _hosting for private conversations files_
-- [Vercel](https://vercel.com/) - _app deploy_
 
 ## Can I use this (simple) app?
 

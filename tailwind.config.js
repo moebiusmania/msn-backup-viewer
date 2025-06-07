@@ -1,6 +1,9 @@
+import { default as typography } from "@tailwindcss/typography";
+import { default as daisyui } from "daisyui";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  content: ["{routes,islands,components}/**/*.{ts,tsx,js,jsx}"],
   darkMode: "class",
   theme: {
     container: {
@@ -8,7 +11,7 @@ export default {
     },
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [typography, daisyui],
   daisyui: {
     themes: ["corporate", "sunset"],
     darkTheme: "sunset",
